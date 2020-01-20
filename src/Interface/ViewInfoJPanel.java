@@ -105,6 +105,8 @@ public class ViewInfoJPanel extends javax.swing.JPanel {
         routingNumberjLabel1 = new javax.swing.JLabel();
         profilePicLbl = new javax.swing.JLabel();
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+
         panelNamejLabel.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         panelNamejLabel.setText("User Information");
 
@@ -269,6 +271,7 @@ public class ViewInfoJPanel extends javax.swing.JPanel {
 
         routingNumberjLabel1.setText("Routing #:");
 
+        profilePicLbl.setBackground(new java.awt.Color(204, 204, 204));
         profilePicLbl.setText("       Profile Picture");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

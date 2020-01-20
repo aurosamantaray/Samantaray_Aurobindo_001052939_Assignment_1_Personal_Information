@@ -56,8 +56,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        displayJPanel.setBackground(new java.awt.Color(255, 255, 255));
-        displayJPanel.setForeground(new java.awt.Color(0, 204, 204));
+        displayJPanel.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout displayJPanelLayout = new javax.swing.GroupLayout(displayJPanel);
         displayJPanel.setLayout(displayJPanelLayout);

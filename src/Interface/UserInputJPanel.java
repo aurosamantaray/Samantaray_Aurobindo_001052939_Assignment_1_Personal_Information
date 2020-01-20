@@ -111,6 +111,8 @@ public class UserInputJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         licenseNumberjLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 153, 153));
+
         panelNamejLabel.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         panelNamejLabel.setText("Create User Profile");
 
