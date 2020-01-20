@@ -6,7 +6,10 @@
 package Interface;
 
 import Business.PersonInformation;
+import java.io.File;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -18,7 +21,7 @@ public class UserInputJPanel extends javax.swing.JPanel {
      * Creates new form UserInputJPanel
      */
     private final PersonInformation personInformation;
-
+    
     public UserInputJPanel(PersonInformation personInformation) {
         initComponents();
         this.personInformation = personInformation;
@@ -95,6 +98,18 @@ public class UserInputJPanel extends javax.swing.JPanel {
         heightTextField = new java.awt.TextField();
         weightTextField = new java.awt.TextField();
         weightLabel = new javax.swing.JLabel();
+        routingNumberjLabel1 = new javax.swing.JLabel();
+        bankNamejLabel1 = new javax.swing.JLabel();
+        bankNameCheckingjTextField = new java.awt.TextField();
+        accountTypejLabel1 = new javax.swing.JLabel();
+        accountBalanceCheckingjTextField = new java.awt.TextField();
+        accountBalancejLabel1 = new javax.swing.JLabel();
+        accountNumberjLabel1 = new javax.swing.JLabel();
+        accountNumberCheckingjTextField = new java.awt.TextField();
+        routingNumberCheckingjTextField = new java.awt.TextField();
+        accountTypeCheckingjComboBox1 = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        licenseNumberjLabel1 = new javax.swing.JLabel();
 
         panelNamejLabel.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         panelNamejLabel.setText("Create User Profile");
@@ -155,13 +170,19 @@ public class UserInputJPanel extends javax.swing.JPanel {
 
         bankNamejLabel.setText("Bank Name:");
 
+        bankNamejTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bankNamejTextFieldActionPerformed(evt);
+            }
+        });
+
         accountTypejLabel.setText("Account Type:");
 
         accountBalancejLabel.setText("Account Balance:");
 
         accountNumberjLabel.setText("Account #:");
 
-        accountTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Savings Account", "Checking Account" }));
+        accountTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Savings Account" }));
         accountTypejComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accountTypejComboBoxActionPerformed(evt);
@@ -231,6 +252,32 @@ public class UserInputJPanel extends javax.swing.JPanel {
 
         weightLabel.setText("Weight:");
 
+        routingNumberjLabel1.setText("Routing #:");
+
+        bankNamejLabel1.setText("Bank Name:");
+
+        accountTypejLabel1.setText("Account Type:");
+
+        accountBalancejLabel1.setText("Account Balance:");
+
+        accountNumberjLabel1.setText("Account #:");
+
+        accountTypeCheckingjComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Checking Account" }));
+        accountTypeCheckingjComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                accountTypeCheckingjComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Browse Picture");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        licenseNumberjLabel1.setText("Uploade photo:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -238,10 +285,6 @@ public class UserInputJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(medicalRecordInformationjLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(medicalRecordInformationjSeparator))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(bankAccountInformationjLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -284,14 +327,7 @@ public class UserInputJPanel extends javax.swing.JPanel {
                                 .addComponent(generalInformationjSeparator))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(routingNumberjLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(routingNumberjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(accountTypejLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(accountTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(routingNumberjLabel)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(layout.createSequentialGroup()
@@ -333,21 +369,28 @@ public class UserInputJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(licenseNumberjLabel)
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(panelNamejLabel)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bankNamejLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(licenseNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bankNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dateOfIssuejLabel)
+                                .addComponent(accountNumberjLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dateOfIssuejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(accountNumberjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dateOfExpirationjLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dateOfExpirationjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bloodTypejLabel)
-                                .addGap(18, 18, 18)
-                                .addComponent(bloodTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(accountBalancejLabel)
+                                .addGap(10, 10, 10)
+                                .addComponent(accountBalancejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(medicalRecordInformationjLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(medicalRecordInformationjSeparator))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(372, 372, 372)
                                 .addComponent(saveInformation))
@@ -366,27 +409,57 @@ public class UserInputJPanel extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(alergy3jLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(alergy3jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(alergy3jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(panelNamejLabel)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(routingNumberjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(bankNamejLabel1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(routingNumberCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(bankNameCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(routingNumberjLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(accountTypejLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(accountTypeCheckingjComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(accountNumberjLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(accountNumberCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(accountBalancejLabel1)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(accountBalanceCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(accountTypejLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(accountTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(bankNamejLabel)
+                                .addComponent(licenseNumberjLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bankNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(licenseNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(accountNumberjLabel)
+                                .addComponent(dateOfIssuejLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(accountNumberjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dateOfIssuejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(accountBalancejLabel)
-                                .addGap(10, 10, 10)
-                                .addComponent(accountBalancejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())))
+                                .addComponent(dateOfExpirationjLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dateOfExpirationjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bloodTypejLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(bloodTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(licenseNumberjLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -418,7 +491,7 @@ public class UserInputJPanel extends javax.swing.JPanel {
                     .addComponent(heightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(weightLabel)
                     .addComponent(weightTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(addressInformationjLabel)
                     .addComponent(addressInformationjSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -432,7 +505,7 @@ public class UserInputJPanel extends javax.swing.JPanel {
                     .addComponent(stateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(zipCodejLabel)
                     .addComponent(zipCodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(bankAccountInformationjLabel)
                     .addComponent(bankAccountInformationjSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -444,15 +517,34 @@ public class UserInputJPanel extends javax.swing.JPanel {
                     .addComponent(accountBalancejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(accountNumberjLabel)
                     .addComponent(accountNumberjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(routingNumberjLabel)
+                            .addComponent(routingNumberjTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(accountTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(accountTypejLabel))))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bankNamejLabel1)
+                    .addComponent(bankNameCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(accountBalancejLabel1)
+                    .addComponent(accountBalanceCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(accountNumberjLabel1)
+                    .addComponent(accountNumberCheckingjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(routingNumberjLabel)
-                        .addComponent(routingNumberjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(routingNumberjLabel1)
+                        .addComponent(routingNumberCheckingjTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(accountTypejLabel)
-                        .addComponent(accountTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(accountTypejLabel1)
+                        .addComponent(accountTypeCheckingjComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(driverLicenseInformationjLabel)
                     .addComponent(driverLicenseInformationjSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -466,7 +558,11 @@ public class UserInputJPanel extends javax.swing.JPanel {
                     .addComponent(dateOfIssuejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dateOfExpirationjLabel2)
                     .addComponent(dateOfExpirationjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(licenseNumberjLabel1)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(medicalRecordInformationjLabel)
                     .addComponent(medicalRecordInformationjSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -480,9 +576,9 @@ public class UserInputJPanel extends javax.swing.JPanel {
                     .addComponent(alergy2jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(alergy3jLabel)
                     .addComponent(alergy3jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(saveInformation)
-                .addGap(142, 142, 142))
+                .addGap(42, 42, 42))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -510,18 +606,21 @@ public class UserInputJPanel extends javax.swing.JPanel {
         personInformation.getGeneralInformation().setFirstName(firstNameTextField.getText());
         personInformation.getGeneralInformation().setLastName(lastNameTextField.getText());
         personInformation.getGeneralInformation().setDateOfBirth(dobTextField.getText());
-
+        
         personInformation.getAddressInformation().setStreetAddress(streetAddressTextField.getText());
         personInformation.getAddressInformation().setCityAddress(cityTextField.getText());
         personInformation.getAddressInformation().setStateAddress(stateTextField.getText());
-
+        
         personInformation.getAccountInformation().setBankName(bankNamejTextField.getText());
         personInformation.getAccountInformation().setAccountType(accountTypejComboBox.getSelectedItem().toString());
-
+        
+        personInformation.getAccountInformation().setBankNameChecking(bankNameCheckingjTextField.getText());
+        personInformation.getAccountInformation().setAccountTypeChecking(accountTypeCheckingjComboBox1.getSelectedItem().toString());
+        
         personInformation.getLicenseInformation().setLicenseIssueDate(dateOfIssuejTextField.getText());
         personInformation.getLicenseInformation().setLicenseExpirationDate(dateOfExpirationjTextField.getText());
         personInformation.getLicenseInformation().setBloodGroup(bloodTypejComboBox.getSelectedItem().toString());
-
+        
         personInformation.getMedicalInformation().setMedicalAlergy1(alergy1jTextField.getText());
         personInformation.getMedicalInformation().setMedicalAlergy2(alergy2jTextField.getText());
         personInformation.getMedicalInformation().setMedicalAlergy3(alergy3jTextField.getText());
@@ -537,6 +636,9 @@ public class UserInputJPanel extends javax.swing.JPanel {
             personInformation.getAccountInformation().setAccountBalance(Integer.parseInt(accountBalancejTextField.getText()));
             personInformation.getAccountInformation().setAccountNumber(Integer.parseInt(accountNumberjTextField.getText()));
             personInformation.getAccountInformation().setRoutingNumber(Integer.parseInt(routingNumberjTextField.getText()));
+            personInformation.getAccountInformation().setAccountBalanceChecking(Integer.parseInt(accountBalanceCheckingjTextField.getText()));
+            personInformation.getAccountInformation().setAccountNumberChecking(Integer.parseInt(accountNumberCheckingjTextField.getText()));
+            personInformation.getAccountInformation().setRoutingNumberChecking(Integer.parseInt(routingNumberCheckingjTextField.getText()));
             personInformation.getLicenseInformation().setLicenseNumber(Integer.parseInt(licenseNumberTextField.getText()));
             personInformation.getMedicalInformation().setRecordNumber(Integer.parseInt(medicalRecordNumberjTextField.getText()));
         } catch (NumberFormatException ne) {
@@ -558,15 +660,41 @@ public class UserInputJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_weightTextFieldActionPerformed
 
+    private void accountTypeCheckingjComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountTypeCheckingjComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountTypeCheckingjComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFileChooser file = new JFileChooser();
+        file.setCurrentDirectory(new File(System.getProperty("user.home")));
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg", "gif", "png");
+        file.addChoosableFileFilter(filter);
+        int result = file.showSaveDialog(null);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = file.getSelectedFile();
+            String path = selectedFile.getAbsolutePath();
+            personInformation.getLicenseInformation().setProfilePicturePath(path);
+    }//GEN-LAST:event_jButton1ActionPerformed
+    }
+    private void bankNamejTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bankNamejTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bankNamejTextFieldActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DoBjLabel;
+    private java.awt.TextField accountBalanceCheckingjTextField;
     private javax.swing.JLabel accountBalancejLabel;
+    private javax.swing.JLabel accountBalancejLabel1;
     private java.awt.TextField accountBalancejTextField;
+    private java.awt.TextField accountNumberCheckingjTextField;
     private javax.swing.JLabel accountNumberjLabel;
+    private javax.swing.JLabel accountNumberjLabel1;
     private java.awt.TextField accountNumberjTextField;
+    private javax.swing.JComboBox<String> accountTypeCheckingjComboBox1;
     private javax.swing.JComboBox<String> accountTypejComboBox;
     private javax.swing.JLabel accountTypejLabel;
+    private javax.swing.JLabel accountTypejLabel1;
     private javax.swing.JLabel addressInformationjLabel;
     private javax.swing.JSeparator addressInformationjSeparator;
     private java.awt.TextField ageTextField;
@@ -579,7 +707,9 @@ public class UserInputJPanel extends javax.swing.JPanel {
     private java.awt.TextField alergy3jTextField;
     private javax.swing.JLabel bankAccountInformationjLabel;
     private javax.swing.JSeparator bankAccountInformationjSeparator;
+    private java.awt.TextField bankNameCheckingjTextField;
     private javax.swing.JLabel bankNamejLabel;
+    private javax.swing.JLabel bankNamejLabel1;
     private java.awt.TextField bankNamejTextField;
     private javax.swing.JComboBox<String> bloodTypejComboBox;
     private javax.swing.JLabel bloodTypejLabel;
@@ -598,10 +728,12 @@ public class UserInputJPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator generalInformationjSeparator;
     private javax.swing.JLabel heightLabel;
     private java.awt.TextField heightTextField;
+    private javax.swing.JButton jButton1;
     private java.awt.TextField lastNameTextField;
     private javax.swing.JLabel lastNamejLabel;
     private java.awt.TextField licenseNumberTextField;
     private javax.swing.JLabel licenseNumberjLabel;
+    private javax.swing.JLabel licenseNumberjLabel1;
     private javax.swing.JLabel medicalRecordInformationjLabel;
     private javax.swing.JSeparator medicalRecordInformationjSeparator;
     private javax.swing.JLabel medicalRecordNumberjLabel;
@@ -609,7 +741,9 @@ public class UserInputJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel panelNamejLabel;
     private java.awt.TextField phoneNumberTextField;
     private javax.swing.JLabel phoneNumberjLabel;
+    private java.awt.TextField routingNumberCheckingjTextField;
     private javax.swing.JLabel routingNumberjLabel;
+    private javax.swing.JLabel routingNumberjLabel1;
     private java.awt.TextField routingNumberjTextField;
     private javax.swing.JButton saveInformation;
     private java.awt.TextField ssnTextField;

@@ -57,12 +57,13 @@ public class MainJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         displayJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        displayJPanel.setForeground(new java.awt.Color(0, 204, 204));
 
         javax.swing.GroupLayout displayJPanelLayout = new javax.swing.GroupLayout(displayJPanel);
         displayJPanel.setLayout(displayJPanelLayout);
         displayJPanelLayout.setHorizontalGroup(
             displayJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 666, Short.MAX_VALUE)
+            .addGap(0, 549, Short.MAX_VALUE)
         );
         displayJPanelLayout.setVerticalGroup(
             displayJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,17 +95,17 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(controljPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controljPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(createjButton)
-                    .addComponent(viewJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(createjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(viewJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controljPanelLayout.setVerticalGroup(
             controljPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controljPanelLayout.createSequentialGroup()
                 .addGap(130, 130, 130)
-                .addComponent(createjButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 285, Short.MAX_VALUE)
-                .addComponent(viewJButton)
+                .addComponent(createjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
+                .addComponent(viewJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(268, 268, 268))
         );
 
@@ -115,16 +116,15 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void viewJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewJButtonActionPerformed
+        ViewInfoJPanel viewInfoJPanel = new ViewInfoJPanel(personInformation);
+        splitPanel.setRightComponent(viewInfoJPanel);
+    }//GEN-LAST:event_viewJButtonActionPerformed
+
     private void createjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createjButtonActionPerformed
         UserInputJPanel userInputJPanel = new UserInputJPanel(personInformation);
         splitPanel.setRightComponent(userInputJPanel);
-
     }//GEN-LAST:event_createjButtonActionPerformed
-
-    private void viewJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewJButtonActionPerformed
-      ViewInfoJPanel viewInfoJPanel = new ViewInfoJPanel(personInformation);
-      splitPanel.setRightComponent(viewInfoJPanel);
-    }//GEN-LAST:event_viewJButtonActionPerformed
 
     /**
      * @param args the command line arguments

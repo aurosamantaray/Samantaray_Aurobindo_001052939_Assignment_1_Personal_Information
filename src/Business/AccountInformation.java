@@ -15,6 +15,51 @@ public class AccountInformation {
     private int accountNumber;
     private int accountBalance;
     private String accountType;
+    private String bankNameChecking;
+    private int routingNumberChecking;
+    private int accountNumberChecking;
+    private int accountBalanceChecking;
+    private String accountTypeChecking;
+
+    public String getBankNameChecking() {
+        return bankNameChecking;
+    }
+
+    public void setBankNameChecking(String bankNameChecking) {
+        this.bankNameChecking = bankNameChecking;
+    }
+
+    public int getRoutingNumberChecking() {
+        return routingNumberChecking;
+    }
+
+    public void setRoutingNumberChecking(int routingNumberChecking) {
+        this.routingNumberChecking = routingNumberChecking;
+    }
+
+    public int getAccountNumberChecking() {
+        return accountNumberChecking;
+    }
+
+    public void setAccountNumberChecking(int accountNumberChecking) {
+        this.accountNumberChecking = accountNumberChecking;
+    }
+
+    public int getAccountBalanceChecking() {
+        return accountBalanceChecking;
+    }
+
+    public void setAccountBalanceChecking(int accountBalanceChecking) {
+        this.accountBalanceChecking = accountBalanceChecking;
+    }
+
+    public String getAccountTypeChecking() {
+        return accountTypeChecking;
+    }
+
+    public void setAccountTypeChecking(String accountTypeChecking) {
+        this.accountTypeChecking = accountTypeChecking;
+    }
 
     public String getBankName() {
         return bankName;

@@ -16,6 +16,15 @@ public class LicenseInformation {
     private String licenseIssueDate;
     private String licenseExpirationDate;
     private String bloodGroup;
+    private String profilePicturePath;
+
+    public String getProfilePicturePath() {
+        return profilePicturePath;
+    }
+
+    public void setProfilePicturePath(String profilePicturePath) {
+        this.profilePicturePath = profilePicturePath;
+    }
 
     public int getLicenseNumber() {
         return licenseNumber;

@@ -5,6 +5,8 @@
  */
 package Business;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author Aurobindo
@@ -15,7 +17,16 @@ public class PersonInformation {
     private GeneralInformation generalInformation;
     private MedicalInformation medicalInformation;
     private LicenseInformation  licenseInformation; 
+    
+    Icon photoInput;
 
+    public Icon getPhotoInput() {
+        return photoInput;
+    }
+
+    public void setPhotoInput(Icon photoInput) {
+        this.photoInput = photoInput;
+    }
     
     public PersonInformation(AccountInformation accountInformation, AddressInformation addressInformation, GeneralInformation demoGraphicInformation, MedicalInformation medicalInformation, LicenseInformation licenseInformation) {
         this.accountInformation = accountInformation;
