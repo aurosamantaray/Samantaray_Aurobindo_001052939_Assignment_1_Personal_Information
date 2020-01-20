@@ -71,7 +71,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPanel.setRightComponent(displayJPanel);
 
-        controljPanel.setBackground(new java.awt.Color(204, 204, 204));
+        controljPanel.setBackground(new java.awt.Color(153, 255, 255));
 
         createjButton.setText("Create");
         createjButton.addActionListener(new java.awt.event.ActionListener() {

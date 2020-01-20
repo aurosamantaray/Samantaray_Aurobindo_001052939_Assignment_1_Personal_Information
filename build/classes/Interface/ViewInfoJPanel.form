@@ -16,11 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="1" pref="879" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -51,57 +47,53 @@
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="streetAddressjLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Component id="streetAddressTextField" min="-2" pref="203" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="addressInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="heightLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="weightLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lastNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="firstNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="phoneNumberjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ssnjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="agejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="DoBjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="heightTextField" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="dobTextField" alignment="1" pref="202" max="32767" attributes="0"/>
-                                  <Component id="ageTextField" alignment="1" pref="202" max="32767" attributes="0"/>
-                                  <Component id="lastNameTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="firstNameTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="ssnTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="phoneNumberTextField" alignment="1" pref="202" max="32767" attributes="0"/>
-                                  <Component id="weightTextField" alignment="1" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="generalInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="statejLabel" max="32767" attributes="0"/>
-                                  <Component id="cityjLabel1" max="32767" attributes="0"/>
-                                  <Component id="zipCodejLabel" pref="109" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="stateTextField" pref="203" max="32767" attributes="0"/>
-                                  <Component id="cityTextField" max="32767" attributes="0"/>
-                                  <Component id="zipCodeTextField" alignment="1" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="driverLicenseInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="dateOfIssuejTextField" alignment="1" min="-2" pref="176" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="streetAddressjLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Component id="streetAddressTextField" min="-2" pref="203" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="addressInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="heightLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="weightLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lastNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="firstNamejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="phoneNumberjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ssnjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="agejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="DoBjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="heightTextField" alignment="1" max="32767" attributes="0"/>
+                              <Component id="dobTextField" alignment="1" pref="214" max="32767" attributes="0"/>
+                              <Component id="ageTextField" alignment="1" max="32767" attributes="0"/>
+                              <Component id="lastNameTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ssnTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="phoneNumberTextField" alignment="1" max="32767" attributes="0"/>
+                              <Component id="weightTextField" alignment="1" max="32767" attributes="0"/>
+                              <Component id="firstNameTextField" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="generalInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="statejLabel" max="32767" attributes="0"/>
+                              <Component id="cityjLabel1" max="32767" attributes="0"/>
+                              <Component id="zipCodejLabel" alignment="0" pref="109" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="stateTextField" pref="203" max="32767" attributes="0"/>
+                              <Component id="cityTextField" max="32767" attributes="0"/>
+                              <Component id="zipCodeTextField" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="driverLicenseInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
                               <Component id="bloodTypejLabel" max="32767" attributes="0"/>
-                              <Component id="dateOfIssuejLabel" max="32767" attributes="0"/>
                               <Component id="dateOfExpirationjLabel2" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -110,10 +102,16 @@
                               <Component id="bloodTypeTextField" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="licenseNumberjLabel" min="-2" pref="136" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="licenseNumberjLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Component id="dateOfIssuejLabel" max="32767" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="licenseNumberTextField" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="dateOfIssuejTextField" min="-2" pref="176" max="-2" attributes="0"/>
+                              <Component id="licenseNumberTextField" min="-2" pref="176" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -122,7 +120,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="accountBalancejLabel" alignment="0" pref="142" max="32767" attributes="0"/>
+                                      <Component id="accountBalancejLabel" alignment="0" max="32767" attributes="0"/>
                                       <Component id="accountTypejLabel" alignment="0" max="32767" attributes="0"/>
                                       <Component id="bankNamejLabel" alignment="0" max="32767" attributes="0"/>
                                       <Component id="accountNumberjLabel" alignment="0" max="32767" attributes="0"/>
@@ -149,11 +147,11 @@
                               </Group>
                               <Component id="bankAccountInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="profilePicLbl" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="medicalRecordInformationjLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -163,16 +161,16 @@
                                       <Component id="alergy2jLabel" alignment="0" max="32767" attributes="0"/>
                                       <Component id="alergy3jLabel" alignment="0" min="-2" pref="129" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="alergy2TextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="alergy3TextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="medicalRecordNumberTextField" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="alergy1TextField" alignment="0" min="-2" pref="209" max="-2" attributes="0"/>
+                                      <Component id="medicalRecordNumberTextField" max="32767" attributes="0"/>
+                                      <Component id="alergy2TextField" max="32767" attributes="0"/>
+                                      <Component id="alergy3TextField" alignment="0" pref="222" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Component id="alergy1TextField" alignment="1" min="-2" pref="222" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -261,8 +259,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="dateOfIssuejLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="dateOfIssuejTextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="dateOfIssuejLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="dateOfIssuejTextField" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -344,15 +342,15 @@
                               <Component id="alergy1jLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Component id="alergy2jLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="alergy3jLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Component id="alergy2TextField" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="alergy3TextField" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
